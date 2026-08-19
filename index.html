@@ -51,6 +51,29 @@
       margin: 0 0 36px;
     }
 
+    .language-switcher {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0 28px;
+    }
+
+    .language-switcher button {
+      border: 1px solid var(--border);
+      background: var(--panel);
+      color: var(--text);
+      border-radius: 12px;
+      padding: 9px 13px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .language-switcher button.active {
+      border-color: var(--red);
+      color: var(--red);
+    }
+
     .nav {
       display: flex;
       flex-wrap: wrap;
@@ -152,6 +175,12 @@
   <main class="container">
     <h1 class="brand">Lifeline</h1>
     <p class="subtitle">Privacy, terms of use, account deletion, and support information.</p>
+
+    <div class="language-switcher" aria-label="Language">
+      <button type="button" class="active">English</button>
+      <button type="button" onclick="location.href='ru.html'">Русский</button>
+      <button type="button" onclick="location.href='es.html'">Español</button>
+    </div>
 
     <nav class="nav">
       <a href="#privacy">Privacy Policy</a>
@@ -532,5 +561,6 @@
       © 2026 Lifeline. All rights reserved.
     </footer>
   </main>
+
 </body>
 </html>
